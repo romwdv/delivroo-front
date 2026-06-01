@@ -1,10 +1,11 @@
+import logo from "../assets/logo-teal.svg";
 const Header = ({ data }) => {
   const { name, description, picture } = data.restaurant;
   return (
     <header>
       <div className="top-header">
         <div className="top-header-center">
-          <img src="src/assets/logo-teal.svg" />
+          <img src={logo} />
         </div>
       </div>
       <div className="resto-info">
