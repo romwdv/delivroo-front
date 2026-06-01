@@ -1,0 +1,278 @@
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif,
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 18px;
+}
+/* Header */
+
+.top-header {
+  height: 60px;
+  border-bottom: 1px solid lightgray;
+}
+
+.top-header-center,
+.resto-info-container {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  height: 100%;
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.resto-info-container {
+  align-items: flex-start;
+  padding: 30px 0;
+}
+
+.top-header-center img {
+  width: 155px;
+}
+
+.resto-info-text {
+  flex: 1 1;
+  margin-right: 30px;
+}
+.resto-info-text h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 0.6rem;
+}
+.resto-info-text p {
+  color: #868a8a;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.resto-info-img {
+  background: #f3f5f5;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 350px;
+}
+
+/* Content */
+
+.content {
+  background-color: #f2f5f5;
+}
+
+.content-container {
+  display: flex;
+  max-width: 1200px;
+  height: 100%;
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.content-menu {
+  flex: 1 1;
+  margin-top: 30px;
+  margin-right: 30px;
+}
+.content-menu-items {
+  min-width: 300px;
+  padding: 0 10px 25px;
+}
+
+.content-menu-items h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  margin-top: 25px;
+}
+
+.content-menu-items-choice {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 60px;
+  width: 100%;
+}
+
+.menu-item-card {
+  flex: 1 1 calc(50% - 12px);
+  max-width: calc(50% - 12px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  transition-duration: 0.3s;
+}
+
+.menu-item-card:hover {
+  box-shadow: 0 22px 24px 0 rgba(46, 51, 51, 0.07);
+}
+
+.menu-item-card-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-item-card-info-bas {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #ff8000;
+  font-weight: 600;
+}
+
+.menu-item-card-img img {
+  height: 100%;
+  object-fit: cover;
+  width: 130px;
+  border-radius: 5px;
+}
+.menu-item-card-img {
+  border-radius: 5px;
+  height: 130px;
+  overflow: hidden;
+  position: relative;
+  width: 130px;
+  flex-shrink: 0;
+  margin: auto;
+}
+
+.menu-item-card-txt {
+  flex: 1 1;
+  min-width: 0;
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-item-card-txt h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.menu-item-card-txt > p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* nombre de lignes max */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #8d9191;
+}
+
+.menu-item-card-info {
+  align-items: center;
+  display: flex;
+}
+
+.menu-item-card-info p {
+  font-size: 1.2rem;
+}
+
+/* Cart */
+
+.cart {
+  width: 350px;
+  position: sticky;
+  bottom: 0;
+}
+
+.cart-card {
+  align-items: stretch;
+  align-self: flex-start;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 22px 24px 0 rgba(46, 51, 51, 0.07);
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+  position: sticky;
+  top: 0;
+}
+
+.cart-card button {
+  background: #00cdbd;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 10px;
+  padding: 1rem;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 1300px) {
+  .content-menu-items-choice {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  .menu-item-card {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  body {
+    font-size: 16px;
+  }
+
+  .top-header-center {
+    justify-content: center;
+  }
+
+  .resto-info-container {
+    flex-direction: column-reverse;
+  }
+  .resto-info-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 30px;
+  }
+
+  .resto-info-text h1 {
+    font-size: 1.6rem;
+    margin-bottom: 1.6rem;
+    margin-top: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .content-container {
+    flex-direction: column;
+  }
+  .cart {
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+  }
+  .cart-card {
+    margin: 5px 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .content-menu {
+    margin-right: 0;
+  }
+}
