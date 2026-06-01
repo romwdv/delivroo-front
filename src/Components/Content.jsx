@@ -1,4 +1,3 @@
-import { IoMdStarOutline } from "react-icons/io";
 import { IoStar } from "react-icons/io5";
 
 const Content = ({ data }) => {

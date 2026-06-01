@@ -10,7 +10,9 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get("http://localhost:3000/data");
+      const response = await axios.get(
+        "https://site--delivroombackend--28mw4x9cgqbh.code.run",
+      );
       setData(response.data);
       setIsLoading(false);
     };
