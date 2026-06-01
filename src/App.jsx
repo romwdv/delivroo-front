@@ -10,9 +10,7 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get(
-        "https://site--delivroombackend--28mw4x9cgqbh.code.run",
-      );
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/data`);
       setData(response.data);
       setIsLoading(false);
     };
