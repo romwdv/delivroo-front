@@ -1,4 +1,5 @@
 import { IoStar } from "react-icons/io5";
+import food from "../assets/food.jpg";
 
 const Content = ({ data }) => {
   return (
@@ -29,8 +30,10 @@ const Content = ({ data }) => {
                             </div>
                           </div>
                           <div className="menu-item-card-img">
-                            {meals.picture && (
+                            {meals.picture ? (
                               <img src={meals.picture} alt="plat" />
+                            ) : (
+                              <img src={food} alt="plat" />
                             )}
                           </div>
                         </div>

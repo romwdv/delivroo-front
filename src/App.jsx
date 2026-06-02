@@ -17,7 +17,7 @@ function App() {
     fetchData();
   }, []);
 
-  if (isLoading) return <span>loading</span>;
+  if (isLoading) return <p>loading</p>;
   // const { name, description, picture } = data.restaurant; // ← data est dispo ici
   return (
     <>
