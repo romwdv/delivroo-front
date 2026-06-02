@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Header from "./Components/Header";
 import Content from "./Components/Content";
+import Car from "./Components/Car";
 
 function App() {
   const [data, setData] = useState(null);
@@ -22,7 +23,12 @@ function App() {
   return (
     <>
       <Header data={data} />
-      <Content data={data} />
+      <div className="content">
+        <div className="content-container">
+          <Content data={data} />
+          <Car />
+        </div>
+      </div>
     </>
   );
 }
