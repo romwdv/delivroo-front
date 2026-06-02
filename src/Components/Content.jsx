@@ -1,7 +1,7 @@
 import { IoStar } from "react-icons/io5";
 import food from "../assets/food.jpg";
 
-const Content = ({ data }) => {
+const Content = ({ data, cart, setCart }) => {
   return (
     <div className="content-menu">
       {data.categories
@@ -13,7 +13,25 @@ const Content = ({ data }) => {
               <div className="content-menu-items-choice">
                 {item.meals.map((meals) => {
                   return (
-                    <div className="menu-item-card" key={meals.id}>
+                    <div
+                      className="menu-item-card"
+                      key={meals.id}
+                      onClick={() => {
+                        const newCart = [...cart];
+                        const isExist = newCart.find((i) => i.id === meals.id);
+                        if (isExist) {
+                          isExist.quantity += 1;
+                        } else {
+                          newCart.push({
+                            title: meals.title,
+                            price: meals.price,
+                            id: meals.id,
+                            quantity: 1,
+                          });
+                        }
+                        setCart(newCart);
+                      }}
+                    >
                       <div className="menu-item-card-txt">
                         <h3>{meals.title}</h3>
                         <p>{meals.description}</p>

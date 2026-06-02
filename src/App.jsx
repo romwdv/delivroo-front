@@ -8,6 +8,7 @@ import Car from "./Components/Car";
 function App() {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,6 +19,8 @@ function App() {
     fetchData();
   }, []);
 
+  console.log(cart);
+
   if (isLoading) return <p>loading</p>;
   // const { name, description, picture } = data.restaurant; // ← data est dispo ici
   return (
@@ -25,8 +28,8 @@ function App() {
       <Header data={data} />
       <div className="content">
         <div className="content-container">
-          <Content data={data} />
-          <Car />
+          <Content data={data} cart={cart} setCart={setCart} />
+          <Car cart={cart} setCart={setCart} />
         </div>
       </div>
     </>
